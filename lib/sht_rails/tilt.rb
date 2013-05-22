@@ -15,7 +15,7 @@ module ShtRails
     def evaluate(scope, locals, &block)
       template_key = path_to_key scope
       <<-HandlebarsTemplate
-  (function() { 
+  (function() {
   #{namespace} || (#{namespace} = {});
   #{namespace}CachedShtTemplates || (#{namespace}CachedShtTemplates = {});
   #{namespace}CachedShtTemplates[#{template_key.inspect}] = Handlebars.compile(#{data.inspect});
@@ -32,7 +32,6 @@ module ShtRails
     
     def path_to_key(scope)
       path = scope.logical_path.to_s.split('/')
-      path.last.gsub!(/^_/, '')
       path.join('/')
     end
   end

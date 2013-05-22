@@ -21,11 +21,11 @@ module ShtRails
     end
 
     def template_extension
-      @template_extension ||= 'handlebars'
+      @template_extension ||= 'hbs'
     end
     
     def action_view_key
-      @action_view_key ||= 'handlebars'
+      @action_view_key ||= 'hbs'
     end
     
     def template_namespace
